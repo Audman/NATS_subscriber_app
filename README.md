@@ -129,6 +129,8 @@ NATS_URL=nats://localhost:4222
 DATABASE_URL=postgresql://your_username:your_password@localhost:5432/nuts_db
 ```
 
+> **Note**: If running outside Docker, ensure NATS and PostgreSQL are running locally and accessible via the URLs set in the `.env` or environment variables.
+
 ---
 
 ## 🔧 Common Issues
