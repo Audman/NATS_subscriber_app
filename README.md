@@ -57,8 +57,8 @@ A 3-layered Python application that subscribes to a NATS topic and stores incomi
 #### 1. Clone the repo
 
 ```bash
-git clone TODO
-cd TODO
+git clone https://github.com/Audman/NATS_subscriber_app
+cd NATS_subscriber_app
 ```
 
 #### 2. Build and start the containers
