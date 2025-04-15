@@ -26,7 +26,7 @@ services:
     volumes:
       - .:/app
     environment:
-      - NATS_URL=nats://nats:4222
+      - NATS_URL=nats://18.234.166.68:4222
       - DATABASE_URL=postgresql://postgres:password@db:5432/nuts_db
     command: ["python", "main.py"]
 

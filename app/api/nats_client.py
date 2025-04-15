@@ -11,9 +11,15 @@ class NatsSubscriber:
     async def connect(self):
         self.nc = await nats.connect(self.nats_url)
 
-    async def subscribe(self, topic):
+    async def subscribe(self, topics):
+        if isinstance(topics, str):
+            topics = [topics]
+
         async def message_handler(msg):
             message = msg.data.decode()
+            print(message)
             await self.service_callback(message)
 
-        await self.nc.subscribe(topic, cb=message_handler)
+        for topic in topics:
+            await self.nc.subscribe(topic, cb=message_handler)
+
